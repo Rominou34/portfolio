@@ -31,15 +31,17 @@ var formY = formation.offsetTop;
 var projY = projets.offsetTop;
 var expY = experiences.offsetTop;
 
-window.addEventListener('scroll', function(e) {
+function checkScroll() {
   var scrollY = document.body.scrollTop;
-  if(scrollY >= (formY-100)) {
-    if(scrollY >= (compY-100)) {
-      if(scrollY >= (projY-100)) {
-        if(scrollY >= (expY-100)) {
+  if(scrollY >= (formY-320)) {
+    if(scrollY >= (compY-320)) {
+      if(scrollY >= (projY-320)) {
+        if(scrollY >= (expY-320)) {
           //EXPERIENCES
           projTitle.style.display = "none";
+          compTitle.style.display = "none";
           aboutTitle.style.display = "none";
+          formTitle.style.display = "none";
           expTitle.style.display = "block";
           expLink.className = "current";
           formLink.className = "";
@@ -61,6 +63,8 @@ window.addEventListener('scroll', function(e) {
           //PROJETS
           expTitle.style.display = "none";
           compTitle.style.display = "none";
+          aboutTitle.style.display = "none";
+          formTitle.style.display = "none";
           projTitle.style.display = "block";
           projLink.className = "current";
           formLink.className = "";
@@ -83,6 +87,8 @@ window.addEventListener('scroll', function(e) {
         //COMPETENCES
         formTitle.style.display = "none";
         projTitle.style.display = "none";
+        aboutTitle.style.display = "none";
+        expTitle.style.display = "none";
         compTitle.style.display = "block";
         compLink.className = "current";
         formLink.className = "";
@@ -104,6 +110,9 @@ window.addEventListener('scroll', function(e) {
     } else {
       //FORMATION
       compTitle.style.display = "none";
+      aboutTitle.style.display = "none";
+      projTitle.style.display = "none";
+      expTitle.style.display = "none";
       formTitle.style.display = "block";
       formLink.className = "current";
       compLink.className = "";
@@ -126,8 +135,15 @@ window.addEventListener('scroll', function(e) {
   else {
     //ABOUT
     aboutTitle.style.display = "block";
+    projTitle.style.display = "none";
+    compTitle.style.display = "none";
+    expTitle.style.display = "none";
     formTitle.style.display = "none";
     avatar_cont.className = "about";
+    projLink.className = "";
+    formLink.className = "";
+    compLink.className = "";
+    expLink.className = "";
     body.style.backgroundColor = "#fdd";
     // var op = ((scrollY)/about.clientHeight)*4;
     // if(op > 3.5) {
@@ -142,4 +158,7 @@ window.addEventListener('scroll', function(e) {
   // } else {
   //   header.className = "";
   // }
-});
+}
+
+window.addEventListener('scroll', checkScroll);
+header.addEventListener('click', checkScroll);
