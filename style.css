@@ -26,25 +26,43 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0);
-  height: 40px;
+  height: 50px;
   z-index: 10;
-  transition: all 0.5s;
+  transition: all 0.2s;
+  background-color: #3f9fff;
+  color: #fff;
+}
+
+#logo-container {
+  flex-basis: 120px;
+  flex-grow: 1;
+  padding: 5px 20px;
+  width: 120px;
+  height: 50px;
 }
 
 #logo {
-  flex-basis: 120px;
-  height: 40px;
-  margin: 0 60px;
-  background-color: #04d;
-  flex-grow: 1
+  width: 40px;
+  height: auto;
 }
 
-header a {
+.logo-path {
+  fill: #fff;
+}
+
+#logo:hover .logo-path {
+  fill: #1f5082;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
+header a:not(#logo-link) {
   font-size: 20px;
-  line-height: 32px;
-  padding: 4px;
-  height: 40px;
+  line-height: 40px;
+  padding: 5px;
+  height: 50px;
   display: inline-block;
   text-decoration: none;
   box-sizing: border-box;
@@ -52,6 +70,11 @@ header a {
   flex-shrink: 0;
   text-align: center;
   color: inherit;
+  transition: background-color 0.25s;
+}
+
+header a:not(#logo-link):hover, header a.current {
+  background-color: #3079c1;
 }
 
 /*
@@ -67,21 +90,51 @@ main {
 */
 
 #avatar-container {
+  display: block;
   position: fixed;
   width: 320px;
-  background-color: rgba(0,0,0,0.05);
-  height: 60vh;
-  z-index: 5;
-  left: calc(50vw - 160px);
-  top: 20vh;
+  left: 0;
+  top: 200px;
 }
 
-#avatar-container h2 {
+#avatar-container g {
+  transition: all 0.25s;
+}
+
+#avatar-container.formation #Formation-ai {
+  opacity: 1;
+}
+
+#avatar-container:not(.formation) #Formation-ai {
+  opacity: 0;
+}
+
+/*
+* TITLE *
+*/
+
+#title-container {
+  position: fixed;
+  width: 100vw;
+  /*background-color: rgba(0,0,0,0.05);*/
+  height: 50px;
+  z-index: 5;
+  left: 0;
+  top: 50px;
+}
+
+#title-container h2 {
   text-align: center;
   font-size: 32px;
+  line-height: 50px;
+  -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.5s; /* Firefox < 16 */
+  -ms-animation: fadein 0.5s; /* Internet Explorer */
+  -o-animation: fadein 0.5s; /* Opera < 12.1 */
+  animation: fadein 0.5s;
 }
 
-#avatar-container h2:not(#about-title) {
+#title-container h2:not(#about-title) {
   display: none;
 }
 
@@ -92,6 +145,11 @@ main {
 /*
 * MAIN *
 */
+
+main {
+  margin-top: 100px;
+}
+
 section {
   min-height: 100vh;
 }
@@ -107,4 +165,13 @@ footer {
   text-align: center;
   width: 100%;
   padding: 24px; 0;
+}
+
+/*
+* ANIMATIONS *
+*/
+
+@keyframes fadein {
+    0%    { opacity: 0; }
+    100%  { opacity: 1; }
 }
