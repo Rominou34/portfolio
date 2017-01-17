@@ -173,14 +173,14 @@ section p {
 }
 
 .milestone {
-  background-color: #3f9fff;
+  background-color: #1f5082;/*#3f9fff;*/
   color: #fff;
   padding: 16px;
   margin: 32px;
   width: 560px;
   position: relative;
-  border: 2px solid #1f5082;
-  border-left: 8px solid #1f5082;
+  border: 8px solid #1f5082;
+  border-left: 8px solid #3f9fff;
   font-size: 20px;
   padding-top: 0;
   border-radius: 0 8px 8px 0;
@@ -189,7 +189,6 @@ section p {
 .milestone p {
   padding: 8px;
   margin-bottom: 16px;
-  border-bottom: 2px solid #1f5082;
   text-align: center;
   font-size: 24px;
 }
@@ -235,6 +234,60 @@ section p {
 
 #sec::before {
   content: "2012\A 2011";
+}
+
+/*
+* COMPETENCES *
+*/
+
+.skill-category p {
+  font-size: 32px;
+  padding: 24px;
+}
+
+.skill-container {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.skill {
+  flex-basis: 10%;
+  margin: 2.5%;
+  flex-grow: 0;
+  height: 80px;
+  display: inline-block;
+  position: relative;
+}
+
+.skill img {
+  height: 100%;
+  vertical-align: middle;
+  display: block;
+  margin: auto;
+}
+
+.skill-info {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: -12.5%;
+  width: 125%;
+  min-height: 32px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  line-height: 28px;
+  border-radius: 4px;
+  padding: 4px;
+  text-align: center;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.25s;
+}
+
+.skill:hover .skill-info {
+  opacity: 1;
 }
 
 /*
