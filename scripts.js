@@ -48,7 +48,6 @@ function checkScroll() {
           projLink.className = "";
           compLink.className = "";
           avatar_cont.className = "experiences";
-          body.style.backgroundColor = "#ddf";
           // var op = ((scrollY-projY)/experiences.clientHeight)*4;
           // if(op < 1) {
           //   expTitle.style.opacity = op;
@@ -71,7 +70,6 @@ function checkScroll() {
           compLink.className = "";
           expLink.className = "";
           avatar_cont.className = "projets";
-          body.style.backgroundColor = "#ddf";
           // var op = ((scrollY-projY)/projets.clientHeight)*4;
           // if(op < 1) {
           //   projTitle.style.opacity = op;
@@ -95,7 +93,6 @@ function checkScroll() {
         expLink.className = "";
         projLink.className = "";
         avatar_cont.className = "competences";
-        body.style.backgroundColor = "#ddf";
         // var op = ((scrollY-compY)/competences.clientHeight)*4;
         // if(op < 1) {
         //   compTitle.style.opacity = op;
@@ -119,7 +116,6 @@ function checkScroll() {
       expLink.className = "";
       projLink.className = "";
       avatar_cont.className = "formation";
-      body.style.backgroundColor = "#ddf";
       // var op = ((scrollY-formY)/formation.clientHeight)*4;
       // if(op < 1) {
       //   formTitle.style.opacity = op;
@@ -144,7 +140,6 @@ function checkScroll() {
     formLink.className = "";
     compLink.className = "";
     expLink.className = "";
-    body.style.backgroundColor = "#fdd";
     // var op = ((scrollY)/about.clientHeight)*4;
     // if(op > 3.5) {
     //   aboutTitle.style.opacity = 1-(op/4);
@@ -158,6 +153,16 @@ function checkScroll() {
   // } else {
   //   header.className = "";
   // }
+}
+
+function displayProjet(projet) {
+  var projetElem = document.querySelector(projet);
+  projetElem.style.display = "block";
+}
+
+function closeProjet(projet) {
+  var projetElem = document.querySelector(projet);
+  projetElem.style.display = "none";
 }
 
 window.addEventListener('scroll', checkScroll);
