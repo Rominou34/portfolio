@@ -109,6 +109,22 @@ header a:not(#logo-link):hover, header a.current {
   opacity: 0;
 }
 
+#avatar-container.experiences #Experiences-ai {
+  opacity: 1;
+}
+
+#avatar-container:not(.experiences) #Experiences-ai {
+  opacity: 0;
+}
+
+#avatar-container.projets #Projets-ai {
+  opacity: 1;
+}
+
+#avatar-container:not(.projets) #Projets-ai {
+  opacity: 0;
+}
+
 /*
 * TITLE *
 */
@@ -156,7 +172,10 @@ main {
 
 section {
   min-height: 100vh;
-  border-top: 1px solid #000;
+}
+
+section:not(#about) {
+  border-top: 2px solid #3f9fff;
 }
 
 section h2 {
@@ -312,13 +331,17 @@ section p {
 
 .projet {
   flex: 0 0 320px;
+  min-width: 30%;
   height: 180px;
-  margin: 25px 0;
-  background-color: #f88;
+  margin: 25px 5px;
+  background-color: #3f9fff;
   box-shadow: 2px 2px 6px #666;
   position: relative;
   border-radius: 4px;
   display: block;
+  background-size: cover;
+  background-attachment: inherit;
+  background-position: center;
 }
 
 .projet-infos {
@@ -350,9 +373,26 @@ section p {
 
 #projet-midilibre {
   background-image: url(img/midi_libre_min.jpg);
-  background-size: cover;
-  background-attachment: inherit;
-  background-position: center;
+}
+
+#projet-octipas {
+  background-image: url(img/octipas_min.jpg);
+}
+
+#projet-ookoodoo {
+  background-image: url(img/ookoodoo_min.jpg);
+}
+
+#projet-papillon {
+  background-image: url(img/papillon_min.jpg);
+}
+
+#projet-festival {
+  background-image: url(img/festival_min.jpg);
+}
+
+#projet-github {
+  background-image: url(img/github_min.jpg);
 }
 
 /*
@@ -377,7 +417,59 @@ section p {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: red;
+  background-color: #3f9fff;
+  color: #fff;
+  border: 0 solid #000;
+  font-size: 60px;
+  line-height: 80px;
+}
+
+.close-button:hover {
+  cursor: pointer;
+  background-color: #3079c1;
+}
+
+.infos-projet h2 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.infos-projet img {
+  margin: 16px auto;
+  display: block;
+  height: 320px;
+  width: auto;
+}
+
+.infos-projet p {
+  font-size: 20px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 16px auto;
+  display: block;
+  padding: 24px;
+}
+
+.infos-projet b {
+  color: #3079c1;
+}
+
+.infos-projet a {
+  background-color: #3f9fff;
+  color: #fff;
+  font-size: 28px;
+  display: block;
+  width: auto;
+  max-width: 600px;
+  margin: 32px auto;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.infos-projet a:hover {
+  background-color: #3079c1;
 }
 
 /*
