@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   </head>
   <body>
@@ -417,25 +418,25 @@
       <!-- FORMATION !-->
       <section id="formation">
         <div id="timeline">
-        <div class="milestone actuel" id="dc">
-          <p>Passerelle - Conduite de Projet Web</p>
-          <b>Etablissement:</b> Digital Campus Montpellier
-        </div>
-        <div class="milestone" id="iut">
-          <p>DUT Informatique</p>
-          <b>Etablissement:</b> IUT de Montpellier
-        </div>
-        <div class="milestone" id="term">
-          <p>Baccalauréat scientifique SVT</p>
-          <b>Spécialité:</b> Informatique et Sciences du Numérique
-          Obtenu avec mention assez bien<br/>
-          <b>Etablissement:</b> Lycée Jean Monnet - Montpellier
-        </div>
-        <div class="milestone" id="sec">
-          <p>Seconde générale</p>
-          Obtention du BIA ( Brevet d'Initiation à l'Aéronautique ) avec mention bien<br/>
-          <b>Etablissement:</b> Lycée Jean Monnet - Montpellier
-        </div>
+          <div class="milestone actuel" id="dc">
+            <p>Passerelle - Conduite de Projet Web</p>
+            <b>Etablissement:</b> Digital Campus Montpellier
+          </div>
+          <div class="milestone" id="iut">
+            <p>DUT Informatique</p>
+            <b>Etablissement:</b> IUT de Montpellier
+          </div>
+          <div class="milestone" id="term">
+            <p>Baccalauréat scientifique SVT</p>
+            <b>Spécialité:</b> Informatique et Sciences du Numérique
+            Obtenu avec mention assez bien<br/>
+            <b>Etablissement:</b> Lycée Jean Monnet - Montpellier
+          </div>
+          <div class="milestone" id="sec">
+            <p>Seconde générale</p>
+            Obtention du BIA ( Brevet d'Initiation à l'Aéronautique ) avec mention bien<br/>
+            <b>Etablissement:</b> Lycée Jean Monnet - Montpellier
+          </div>
         </div>
       </section>
       <!-- COMPETENCES !-->
@@ -596,9 +597,83 @@
       </section>
       <!-- EXPERIENCES !-->
       <section id="experiences">
+        <div class="experience">
+          <h2>Équipier polyvalent au McDonald's de Carrefour Grand Sud</h2>
+          <div class="content">
+            <p>
+              <b>Entreprise:</b> McDonald's
+            </p>
+            <p>
+              <b>Période:</b> Septembre 2016
+            </p>
+            <p>
+              <b>Type d'emploi:</b> Contrat étudiant
+            </p>
+            <p>
+              <b>Missions:</b> Préparation des hamburgers ou des frites, selon le poste affecté
+            </p>
+            <p class="skills-list">
+              <b>Compétences acquises:</b>
+            </p>
+              <ul>
+                <li>Esprit d'équipe</li>
+                <li>Première expérience dans un milieu de travail au mouvement soutenu</li>
+                <li>Recettes des burgers de l'enseigne</li>
+              </ul>
+          </div>
+        </div>
+        <div class="experience">
+          <h2>Employé logistique à l'Intermarché de Prades-le-Lez</h2>
+          <div class="content">
+            <p>
+              <b>Entreprise:</b> Intermarché
+            </p>
+            <p>
+              <b>Période:</b> Août 2016
+            </p>
+            <p>
+              <b>Type d'emploi:</b> Contrat saisonnier
+            </p>
+            <p>
+              <b>Missions:</b> Mise en rayon des produits, facing des rayons, inventaire des produits
+            </p>
+            <p class="skills-list">
+              <b>Compétences acquises:</b>
+            </p>
+              <ul>
+                <li>Première expérience dans le monde du travail ( en dehors des stages )</li>
+                <li>Conduite de transpalettes</li>
+              </ul>
+          </div>
+        </div>
+        <div class="experience">
+          <h2>Stage de 3 mois en développement web</h2>
+          <div class="content">
+            <p>
+              <b>Entreprise:</b> Octipas
+            </p>
+            <p>
+              <b>Période:</b> Février - Avril 2016
+            </p>
+            <p>
+              <b>Sujet du stage:</b> Développement d'applications web
+            </p>
+            <p class="skills-list">
+              <b>Compétences acquises:</b>
+            </p>
+              <ul>
+                <li>Développement d'algorithmes complexes en Javascript</li>
+                <li>Utilisation d'un framework PHP</li>
+                <li>Approfondissement des connaissances en HTML et CSS</li>
+                <li>Utilisation de Git</li>
+              </ul>
+          </div>
+        </div>
       </section>
 
-      <!-- INFOS PROJETS !-->
+      <!--
+      ***** INFOS PROJETS *****
+      !-->
       <!-- MIDI LIBRE !-->
       <div id="infos-midilibre" class="infos-projet">
         <button onclick="javascript:closeProjet('#infos-midilibre')" class="close-button">✖</button>
@@ -704,6 +779,20 @@
     </main>
     <footer>
       Romain Arnaud - 2017
+      <div class="contact-infos">
+        <a href="mailto:arnaud.romain34@gmail.com">
+          <span class="icons8-message"></span>
+        </a>
+        <a href="tel:+33646720902">
+          <span class="icons8-phone"></span>
+        </a>
+        <a href="https://github.com/Rominou34">
+          <span class="icons8-github"></span>
+        </a>
+        <a href="https://fr.linkedin.com/in/romain-arnaud-b369a2101">
+          <span class="icons8-linkedin"></span>
+        </a>
+      </div>
     </footer>
   </body>
   <script src="scripts.js"></script>

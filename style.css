@@ -1,3 +1,5 @@
+@import url(romainarnaud-fr/css/styles.min.css);
+
 html, body {
   width: 100%;
   min-height: 100%;
@@ -137,7 +139,7 @@ header a:not(#logo-link):hover, header a.current {
   z-index: 5;
   left: 0;
   top: 50px;
-  background-color: #fff;
+  background-color: #e3e3e3;
 }
 
 #title-container h2 {
@@ -176,6 +178,11 @@ section {
 
 section:not(#about) {
   border-top: 2px solid #3f9fff;
+  min-height: calc(100vh - 110px);
+}
+
+#projets {
+  padding: 64px 0;
 }
 
 section h2 {
@@ -196,7 +203,10 @@ section p {
 
 #timeline {
   border-left: 4px solid #1f5082;
-  margin-left: 120px;
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 600px;
 }
 
 .milestone {
@@ -204,7 +214,8 @@ section p {
   color: #fff;
   padding: 16px;
   margin: 32px;
-  width: 560px;
+  margin-right: 0;
+  max-width: 560px;
   position: relative;
   border: 8px solid #1f5082;
   border-left: 8px solid #3f9fff;
@@ -473,6 +484,45 @@ section p {
 }
 
 /*
+* EXPERIENCES *
+*/
+
+.experience {
+  width: 80%;
+  max-width: 1000px;
+  display: block;
+  margin: 32px auto;
+  background-color: #e3e3e3;
+  box-shadow: 3px 3px 6px 0 #666;
+  padding: 0;
+}
+
+.experience h2 {
+  background-color: #3f9fff;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+}
+
+.experience .content {
+  padding: 20px;
+}
+
+.experience b {
+  color: #3079c1;
+}
+
+.experience li {
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.experience .skills-list {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/*
 * FOOTER *
 */
 
@@ -483,6 +533,26 @@ footer {
   text-align: center;
   width: 100%;
   padding: 24px; 0;
+}
+
+.contact-infos {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin: 16px auto;
+  margin-bottom: 0;
+  justify-content: space-around;
+}
+
+.contact-infos a {
+  font-size: 60px;
+  color: #fff;
+  display: block;
+}
+
+.contact-infos a:hover {
+  color: #888;
+  cursor: pointer;
 }
 
 /*
