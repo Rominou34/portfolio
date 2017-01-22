@@ -197,6 +197,24 @@ section p {
   font-size: 20px;
 }
 
+#CV-link {
+  display: block;
+  font-size: 32px;
+  background-color: #3f9fff;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  width: 80%;
+  max-width: 400px;
+  margin: 32px auto;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+#CV-link:hover {
+  background-color: #3079c1;
+}
+
 /*
 * FORMATION *
 */
