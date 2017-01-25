@@ -19,6 +19,14 @@
     flex-grow: 2;
   }
 
+  .header-icon {
+    display: block;
+  }
+
+  .header-text {
+    display: none;
+  }
+
   main {
     width: 100%;
     padding: 0;

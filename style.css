@@ -83,6 +83,7 @@ header a:not(#logo-link):hover, header a.current {
 
 .header-icon {
   font-size: 2em;
+  display: none;
 }
 
 /*
