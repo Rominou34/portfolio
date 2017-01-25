@@ -3,8 +3,56 @@
     display: none;
   }
 
+  #title-container h2 {
+    font-size: 1.5em;
+  }
+
+  #logo-container {
+    padding: 4px;
+    flex-basis: 40px;
+    width: 40px;
+    flex-grow: 1;
+  }
+
+  header a:not(#logo-link) {
+    flex-basis: 15%;
+    flex-grow: 2;
+  }
+
   main {
     width: 100%;
+    padding: 0;
     margin-left: 0;
+  }
+
+  #timeline {
+    margin-left: 100px;
+    width: calc(100% - 100px);
+  }
+
+  .milestone {
+    width: calc(100% - 20px);
+  }
+
+  .milestone {
+    margin-left: 8px;
+  }
+
+  .milestone::after {
+    left: -26px;
+  }
+
+  .milestone::before {
+    left: -110px;
+    width: 80px;
+    font-size: 0.8em;
+  }
+
+  .experience {
+    width: 95%;
+  }
+
+  .experience .content {
+    padding: 0.5em;
   }
 }

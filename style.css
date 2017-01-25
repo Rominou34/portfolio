@@ -24,10 +24,12 @@ html, body, p, div, header, article, h1, h2, h3, h4, h5, h6, form {
 
 header {
   display: flex;
+  flex-shrink: 1;
+  flex-grow: 0;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   z-index: 10;
   transition: all 0.2s;
@@ -69,7 +71,7 @@ header a:not(#logo-link) {
   text-decoration: none;
   box-sizing: border-box;
   flex-basis: 140px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   text-align: center;
   color: inherit;
   transition: background-color 0.25s;
@@ -77,6 +79,10 @@ header a:not(#logo-link) {
 
 header a:not(#logo-link):hover, header a.current {
   background-color: #3079c1;
+}
+
+.header-icon {
+  font-size: 2em;
 }
 
 /*
@@ -233,6 +239,7 @@ section p {
   padding: 16px;
   margin: 32px;
   margin-right: 0;
+  width: 80%;
   max-width: 560px;
   position: relative;
   border: 8px solid #1f5082;
@@ -306,6 +313,7 @@ section p {
   justify-content: left;
   width: 100%;
   align-items: center;
+  flex-wrap: wrap;
   padding-bottom: 24px;
 }
 
@@ -313,6 +321,7 @@ section p {
   flex-basis: 10%;
   margin: 2.5%;
   flex-grow: 0;
+  flex-shrink: 1;
   height: 80px;
   display: inline-block;
   position: relative;
