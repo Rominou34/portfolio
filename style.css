@@ -172,6 +172,10 @@ header a:not(#logo-link):hover, header a.current {
 * MAIN *
 */
 
+body.modal-open {
+    overflow: hidden;
+}
+
 main {
   margin-top: 110px;
   width: calc(100% - 320px);
@@ -448,6 +452,7 @@ section p {
   left: 0;
   z-index: 15;
   display: none;
+  overflow-y: scroll;
 }
 
 .close-button {

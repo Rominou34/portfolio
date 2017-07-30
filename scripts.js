@@ -158,11 +158,13 @@ function checkScroll() {
 function displayProjet(projet) {
   var projetElem = document.querySelector(projet);
   projetElem.style.display = "block";
+  document.body.classList.add("modal-open");
 }
 
 function closeProjet(projet) {
   var projetElem = document.querySelector(projet);
   projetElem.style.display = "none";
+  document.body.classList.remove("modal-open");
 }
 
 window.addEventListener('scroll', checkScroll);
